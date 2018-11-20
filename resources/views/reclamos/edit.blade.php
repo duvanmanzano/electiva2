@@ -81,5 +81,8 @@
                 error.insertBefore(element);
             }
         });
+        $(function(){
+            $("#CorreoConfirmar").val($("#Correo").val());
+        });
     </script>
 @endsection
