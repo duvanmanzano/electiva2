@@ -16,10 +16,10 @@ class CreateReclamosTable extends Migration
         Schema::create('reclamos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Nombre');
-            $table->integer('Documento');
+            $table->string('Documento');
             $table->string('Correo');
             $table->string('Direccion');
-            $table->integer('Telefono');
+            $table->string('Telefono');
             $table->text('Motivo');
             $table->timestamps();
             $table->softDeletes();

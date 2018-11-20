@@ -43,10 +43,10 @@ class Reclamos extends Model
      */
     protected $casts = [
         'Nombre' => 'string',
-        'Documento' => 'integer',
+        'Documento' => 'string',
         'Correo' => 'string',
         'Direccion' => 'string',
-        'Telefono' => 'integer',
+        'Telefono' => 'string',
         'Motivo' => 'string'
     ];
 
