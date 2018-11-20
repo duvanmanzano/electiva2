@@ -59,7 +59,7 @@ class ReclamosController extends AppBaseController
 
         $reclamos = $this->reclamosRepository->create($input);
 
-        Flash::success('Reclamos saved successfully.');
+        Flash::success('Reclamo Guardado Correctamente.');
 
         return redirect(route('reclamos.index'));
     }
@@ -76,7 +76,7 @@ class ReclamosController extends AppBaseController
         $reclamos = $this->reclamosRepository->findWithoutFail($id);
 
         if (empty($reclamos)) {
-            Flash::error('Reclamos not found');
+            Flash::error('Reclamo no encontrado');
 
             return redirect(route('reclamos.index'));
         }
@@ -96,7 +96,7 @@ class ReclamosController extends AppBaseController
         $reclamos = $this->reclamosRepository->findWithoutFail($id);
 
         if (empty($reclamos)) {
-            Flash::error('Reclamos not found');
+            Flash::error('Reclamo no encontrado');
 
             return redirect(route('reclamos.index'));
         }
@@ -117,14 +117,14 @@ class ReclamosController extends AppBaseController
         $reclamos = $this->reclamosRepository->findWithoutFail($id);
 
         if (empty($reclamos)) {
-            Flash::error('Reclamos not found');
+            Flash::error('Reclamo no encontrado');
 
             return redirect(route('reclamos.index'));
         }
 
         $reclamos = $this->reclamosRepository->update($request->all(), $id);
 
-        Flash::success('Reclamos updated successfully.');
+        Flash::success('Reclamo Actualizado Satisfactoriamente.');
 
         return redirect(route('reclamos.index'));
     }
@@ -141,14 +141,14 @@ class ReclamosController extends AppBaseController
         $reclamos = $this->reclamosRepository->findWithoutFail($id);
 
         if (empty($reclamos)) {
-            Flash::error('Reclamos not found');
+            Flash::error('Reclamo no encontrado');
 
             return redirect(route('reclamos.index'));
         }
 
         $this->reclamosRepository->delete($id);
 
-        Flash::success('Reclamos deleted successfully.');
+        Flash::success('Reclamo Eliminado Correctamente.');
 
         return redirect(route('reclamos.index'));
     }

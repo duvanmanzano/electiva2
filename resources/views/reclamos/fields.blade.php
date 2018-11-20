@@ -10,22 +10,27 @@
     {!! Form::number('Documento', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Direccion Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('Direccion', 'Dirección:') !!}
+    {!! Form::text('Direccion', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Telefono Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('Telefono', 'Teléfono:') !!}
+    {!! Form::number('Telefono', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Correo Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('Correo', 'Correo:') !!}
     {!! Form::text('Correo', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Direccion Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('Direccion', 'Direccion:') !!}
-    {!! Form::text('Direccion', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Telefono Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('Telefono', 'Telefono:') !!}
-    {!! Form::number('Telefono', null, ['class' => 'form-control']) !!}
+    {!! Form::label('CorreoConfirmar', 'Confirmar Correo:') !!}
+    {!! Form::text('CorreoConfirmar', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Motivo Field -->
@@ -36,6 +41,6 @@
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('reclamos.index') !!}" class="btn btn-default">Cancel</a>
+    {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('reclamos.index') !!}" class="btn btn-default">Cancelar</a>
 </div>

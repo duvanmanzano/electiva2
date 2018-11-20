@@ -2,12 +2,12 @@
     <thead>
         <tr>
             <th>Nombre</th>
-        <th>Documento</th>
-        <th>Correo</th>
-        <th>Direccion</th>
-        <th>Telefono</th>
-        <th>Motivo</th>
-            <th colspan="3">Action</th>
+            <th>Documento</th>
+            <th>Correo</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Motivo</th>
+            <th colspan="3">Acción</th>
         </tr>
     </thead>
     <tbody>
@@ -24,7 +24,7 @@
                 <div class='btn-group'>
                     <a href="{!! route('reclamos.show', [$reclamos->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="{!! route('reclamos.edit', [$reclamos->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Se eliminará el registro de manera permanente, ¿desea continuar?')"]) !!}
                 </div>
                 {!! Form::close() !!}
             </td>
