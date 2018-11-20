@@ -57,8 +57,8 @@ class Reclamos extends Model
      */
     public static $rules = [
         'Nombre' => 'required',
-        'Documento' => 'required|numeric',
-        'Correo' => 'required|email',
+        'Documento' => 'required|numeric||unique:reclamos',
+        'Correo' => 'required|email|unique:reclamos',
         'Direccion' => 'required',
         'Telefono' => 'required|numeric',
         'Motivo' => 'required'
